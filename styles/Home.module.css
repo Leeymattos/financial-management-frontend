@@ -1,121 +1,124 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
+.container form{
+  width: 20rem;
+
+  background-color: var(--background2);
+  padding: 2rem;
+
+  text-align: center;
+
+  border-radius: 6px;
+}
+
+.container form h1{
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.container .inputContainer{
+  position: relative;
+  margin-top: 2rem;
+}
+
+.container .inputContainer input{
+  border: 0;
+  border-bottom: 2px solid var(--background2);
+  border-radius: 6px;
+  outline: none;
+  transition: all .2s ease-in-out;
+}
+
+.container .inputContainer label{
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 1rem;
+  cursor: text;
+  transition: all .2s ease-in-out;
+}
+
+.container .inputContainer input,
+.container .inputContainer label {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+.container .inputContainer input:valid,
+.container .inputContainer input:focus {
+  border-bottom: 2px solid var(--orange2);
+}
+
+.container .inputContainer input:valid + label,
+.container .inputContainer input:focus + label {
+  font-size: .9rem;
+  top: -30px;
+  pointer-events: none;
+  color: var(--orange2);
+}
+
+.container form div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+.container form div button{
+  margin-top: 1rem;
+
+  width: 40%;
+  height: 3rem;
+
+  border-radius: 6px;
+  border: 0;
+
+  font-weight: bold;
+  background-color: var(--orange);
+  transition: all .2s ease-in-out;
+}
+
+.container form div button:hover{
+  background-color: var(--orange2);
+}
+
+.container form  div{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.footer a {
+.container form div a{
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  justify-content: center;
+
+  margin-top: 1rem;
+  color: white;
+  font-weight: 500;
+
+  transition: all .2s ease-in-out;
+
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
+.container form div a:hover{
   text-decoration: underline;
+  opacity: .8;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
 
-.title,
-.description {
-  text-align: center;
-}
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.container form div svg{
+  margin-right: .2rem;
 }

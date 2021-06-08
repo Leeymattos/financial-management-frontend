@@ -1,16 +1,43 @@
-html,
-body {
-  padding: 0;
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+:root{
+  --background: #f2f2f5;
+  --title: #2E2C47;
+  --orange: #CC674F;
+  --orange2: #FF8163;
+  --linkText: #29201b;
+  --background2: #3A3768;
+}
+
+@media(max-width: 1080px){
+  html{
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width:728px){
+  html{
+    font-size: 87.5%;
+  }
+}
+
+body{
+  background-color: var(--background);
+}
+
+body, input, textarea, button {
+  font: 400 1rem 'Roboto', sans-serif; 
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
